@@ -21,10 +21,15 @@ az group delete --name 'rg-coursera-azure'
 
 To create a Storage Account using the Azure CLI
 ``` bash
-az storage account create --name 'stcourserajlo' -g 'rg-coursera-azure'
+az storage account create --name 'stcourserajlo' -g 'rg-coursera-azure' --sku 'Standard_LRS'
+```
+
+To delete a Storage Account
+``` bash
+az storage account delete --name 'stcourserajlo'
 ```
 
 To create a Function App using the Azure CLI
 ``` bash
-az functionapp create -g 'rg-coursera-azure'-n 'func-coursera-jlo' -s 'stcourserajlo'
+az functionapp create -g 'rg-coursera-azure' -n 'func-coursera-jlo' -s 'stcourserajlo' -c 'southafricanorth'
 ```
