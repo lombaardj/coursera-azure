@@ -5,6 +5,11 @@ To create a resource group using Bicep, run resourceGroup.bicep
 az deployment sub create --template-file ./resourceGroup.bicep --location southafricanorth  
 ```
 
+To change the active subscription using the Azure CLI
+```bash
+az account set --subscription 'Azure subscription 1'
+```
+
 To create a resource group using the Azure CLI  
 ``` bash
 az group create --location 'southafricanorth' --name 'rg-coursera-azure'
